@@ -1,0 +1,11 @@
+<h1> Listing laptops <h1>
+<% @laptops.each do |laptop|%>
+	<div><%= laptop.brand %></div>
+		<% link_to 'Show', laptop.path(laptop) %>
+		<% link_to 'Edit', edit_laptop.path(laptop) %>
+
+<% end %>
+
+<p>
+    <%= link_to 'New laptop', new_laptop_path %>
+</p>
