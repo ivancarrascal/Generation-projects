@@ -12,3 +12,8 @@ Project.create name: "Pues nada", description: "Chica, lo que te decia"
 100. times do |num|
 	Project.create name: "Pedro", description: "Que no es Almodovar"
 end
+
+Entry.create hours: 5, minutes: 50, comments: "No se, estoy aqui probando, tampoco me leas mucho", project_id: 1
+Entry.create hours: 3, minutes: 25, comments: "Bla, bla, bla. Caca, culo, pedo pis.", project_id: 1
+Entry.create hours: 0, minutes: 13, comments: "Pues mira, solo 13 minutos, no me he esmerado mucho", project_id: 2
+Entry.create hours: 15, minutes: 20, comments: "Claro, te dejas todo para ultima hora y mira lo que pasa", project_id: 2
