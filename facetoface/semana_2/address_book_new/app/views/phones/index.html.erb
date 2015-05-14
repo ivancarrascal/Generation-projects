@@ -1,0 +1,8 @@
+<h1>Phones of <%= @contact.name %></h1>
+<ul>
+	<% @phones.each do |phone| %>
+		<li>Phone number: <%= phone.phone_number %>
+			Description: <%= phone.description %>
+		</li>
+	<% end %>
+</ul>

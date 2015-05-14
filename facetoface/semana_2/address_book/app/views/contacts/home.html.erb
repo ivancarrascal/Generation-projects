@@ -1,0 +1,6 @@
+<h1>Contacts sorted alphabetically</h1>
+<ul>
+	<% @contacts.each do |contact| %>
+			<li><%= contact.id %> - <%= contact.name %> - <%= contact.address %> - <%= contact.email_adress %> - <%= contact.phone_number %></li>
+	<% end %>
+</ul>
