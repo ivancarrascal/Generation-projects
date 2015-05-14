@@ -1,0 +1,6 @@
+<h1> Todos los enlaces </h1>
+<ul>
+	<% @url.each do |url| %>
+		<li>LINK <%= url.id %>: <%= url.url %> Created at: <%= url.created_at %> Visited <%= url.visits %> times</li>
+	<% end %>
+</ul>

@@ -14,4 +14,11 @@ class Project < ActiveRecord::Base
 	def self.last_created_projects param
 		order(created_at: :desc).limit(param)
 	end
+	def calculate_worked_hours month, year
+		all_entries = self.entries
+		all_selected_entries = all_entries.select do |entry|
+			entry.date.month == month && entry.date.year == year
+		end
+		all_selected_entries.reduce(0){|sum, entry| sum + entry.hours}
+	end
 end

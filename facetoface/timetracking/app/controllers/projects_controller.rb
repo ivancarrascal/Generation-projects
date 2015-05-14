@@ -6,7 +6,7 @@ class ProjectsController < ApplicationController
 		begin
 			@project = Project.find params[:id]
 		rescue ActiveRecord::RecordNotFound
-			render 'no_projects_found'
+			render 'no_projects_found', layout: 'admin'
 		end
 	end
 end
