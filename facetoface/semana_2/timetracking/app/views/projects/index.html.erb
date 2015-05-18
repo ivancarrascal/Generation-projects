@@ -1,5 +1,6 @@
 <ul>
 	<% @projects.each do |project| %>
-			<li><%= project.id %> - <%= project.name %> - <%= project.description if project.description.present? %> - <%= project.created_at %></li>
+			<li><%= project.id %> - <%= link_to(project.name, project_entries_path(project)) %> - <%= project.description if project.description.present? %> - <%= project.created_at %> - <%= link_to('Delete project', project_path(project), method: :delete, data: {confirm: "Are you sure?"}) %></li>
 	<% end %>
+	<li><%= link_to('New project', new_project_path) %></li>
 </ul>

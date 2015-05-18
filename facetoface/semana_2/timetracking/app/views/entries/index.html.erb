@@ -1,9 +1,15 @@
+<% flash_message %>
+
 <ul>
 	<% @entries.each do |entry| %>
 	<li>
+		<%= entry.id %> - 
 		<%= entry. hours %> h - 
 		<%= entry.minutes %> m - 
 		<%= entry.date %>
+		<%= link_to('Edit entry', edit_project_entry_path(@project, entry)) %>
+		<%= link_to('Delete entry', project_entry_path(@project, entry), method: :delete, data: {confirm: 'Are you sure?'}) %>
 	</li>
 	<% end %>
+	<li><%= link_to('Back', projects_path) %></li>
 </ul>
