@@ -1,9 +1,8 @@
-<h1>Books</h1>
+<h1>Virtual Library</h1>
 <ul>
 	<% @books.each do |book| %>
-		<li><%= book.name %>
-			<%= book.description %>
-			<%= Price: book.price %>
-		</li>
+		<h2><%= link_to(book.name, book_path(book)) %></h2>
+		<li><%= book.description %></li>
+		<h3>Price: <%= book.price %> - Rating: <%= book.rating %></h3>
 	<% end %>
 </ul>

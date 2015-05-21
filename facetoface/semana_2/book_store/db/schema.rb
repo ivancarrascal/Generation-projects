@@ -17,8 +17,10 @@ ActiveRecord::Schema.define(version: 20150514154026) do
     t.string   "name"
     t.float    "price"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.float    "rating",      default: 0.0
+    t.float    "times_rated", default: 0.0
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
 end
