@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  bandName: MyString
+  venue: MyString
+  city: MyString
+  date: MyString
+  price: 1.5
+  description: MyText
+
+two:
+  bandName: MyString
+  venue: MyString
+  city: MyString
+  date: MyString
+  price: 1.5
+  description: MyText

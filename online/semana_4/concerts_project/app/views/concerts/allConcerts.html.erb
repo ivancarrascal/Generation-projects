@@ -1,0 +1,21 @@
+<nav class="nav primary-nav">
+	<ul>
+		<li><a><%= link_to 'Home', concerts_path %></a></li><!--
+		--><li><a><%= link_to 'New concert', new_concert_path %></a></li><!--
+		--><li><a><%= link_to 'Popular concerts', popularConcerts_path %></a></li><!--
+		--><li><a><%= link_to 'All concerts', allConcerts_path %></a></li>
+	</ul>
+</nav>
+
+<h1>All concerts</h1>
+
+<% @concerts.each do |concert| %>
+<div class="acceder-a-conciertos">
+	<a><%= link_to concert.bandName, concert_path(concert) %></a>
+		<%= concert.city %>,
+		<%= concert.date %>
+		<%= button_to 'Eliminar', concert_path(concert), method: :delete %>
+</div>
+<% end %>
+
+<footer>Crafted with &hearts; by Alejo, Ivan, Irene y Juan Carlos</footer>

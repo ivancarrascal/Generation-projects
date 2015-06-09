@@ -1,0 +1,26 @@
+<nav class="nav primary-nav">
+	<ul>
+		<li><a><%= link_to 'Home', concerts_path %></a></li><!--
+		--><li><a><%= link_to 'New concert', new_concert_path %></a></li><!--
+		--><li><a><%= link_to 'Popular concerts', popularConcerts_path %></a></li><!--
+		--><li><a><%= link_to 'All concerts', allConcerts_path %></a></li>
+	</ul>
+</nav>
+
+<h1 id="band"><%= @concerts.bandName %></h1>
+
+<div>
+<div id="datosConcierto">
+	<span class="textInfo"><span class="label">Date: </span><%=@concerts.date %></span>
+	<span class="textInfo"><span class="label">City: </span><%= @concerts.city %></span>
+	<span class="textInfo"><span class="label">Venue: </span><%= @concerts.venue %></span>
+	<span class="textInfo"><span class="label">Price: </span><%= @concerts.price %></span>
+</div>
+
+<div id="description">
+	<%= @concerts.description %>
+</div>
+
+<div id="likeButton"><a><%= link_to '¡Danos un like!', :controller => 'concerts', :action => 'like' %></a></div><br><br> tenemos <%= @concerts.totalLikes %>
+
+<footer>Crafted with &hearts; by Alejo, Ivan, Irene y Juan Carlos</footer>

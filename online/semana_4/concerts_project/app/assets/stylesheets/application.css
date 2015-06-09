@@ -1,0 +1,139 @@
+body {
+	background:#293f50;
+	  color:#888;
+	  font:300 16px/22px "Lato", "Open sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	  width:960px;
+	  margin:75px auto;
+	  padding-left:30px;
+	  padding-right:30px;
+	  text-align:center;
+}
+a {
+	color: #FFFFFF;
+	font-size: 20px;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+div.acceder-a-conciertos a:hover {
+	border:2px solid #13aff0;
+}
+
+.nav a:hover {
+	color:#13aff0;
+	border-bottom:2px solid #13aff0;
+}
+
+ #displayConcerts {
+ 	
+ 	border:1px solid grey;
+ 	border-collapse: collapse;
+ }
+
+ #displayConcerts th, #displayConcerts td {
+ 	border:1px solid grey;
+ }
+
+ #title{
+ 	text-align: center;
+ 	color: #E9E4FF;
+ 	margin-bottom:80px;
+ 	font-size: 60px;
+ }
+ #displayConcerts{border: none;}
+ #band{font-size: 60px;
+ 		color: #FFFFFF;
+ 		text-align: center;
+ 		}
+ #descConcert{color: #FFFFFF;
+ 	font-size: 25px;}
+#tableConcerts{text-align:center;
+		background-color: #002FC7;
+		border-radius: 15px;
+		width: 100%;}
+#datosConcierto {
+margin-top:75px;
+margin-bottom:50px;
+}
+
+.textInfo{
+	margin-left: 50px;
+}
+.label{
+	color:#13aff0;
+}
+
+#description{
+	border:1px solid grey;
+	border-radius: 5px;
+	margin-bottom:75px;
+	font-size: 25px;
+	padding:20px;
+}
+#buttonBack{
+	background:#13aff0;
+	display:inline-block;
+	text-align: right;
+	margin-top: 30px;
+	border:1px solid grey;
+	border-radius: 5px;
+	padding:10px;
+	float:right;
+}
+
+.nav {
+  text-align:center;
+  margin-bottom:100px;
+}
+
+.nav li {
+  display:inline-block;
+  margin:0 10px;
+  vertical-align:top;
+}
+
+.navl li:last-child {
+  margin-right:0; 
+}
+
+#today-concerts, #month-concerts {
+	width:480px;
+	float:left;
+}
+
+footer {
+	margin-top:200px;
+	clear:both;
+	text-align: center;
+}
+
+h1 {
+	margin-bottom: 25px;
+}
+
+h2 { color:#13aff0;}
+#info {
+	width:300px;
+	margin:auto;
+	border:1px solid;
+	border-radius: 5px;
+	padding:8px;
+}
+
+#creators {
+	margin-top:50px;
+	color:#a9b2b9;
+	border:none;
+}
+
+#likeButton {
+	display: inline-block;
+}
+
+#likeButton a:hover {
+	border:1px solid red;
+	border-radius: 5px;
+	background:red;
+	color:;
+	padding:5px;
+}

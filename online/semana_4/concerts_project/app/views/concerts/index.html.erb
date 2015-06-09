@@ -1,0 +1,54 @@
+<nav class="nav primary-nav">
+	<ul>
+		<li><a><%= link_to 'Home', concerts_path %></a></li><!--
+		--><li><a><%= link_to 'New concert', new_concert_path %></a></li><!--
+		--><li><a><%= link_to 'Popular concerts', popularConcerts_path %></a></li><!--
+		--><li><a><%= link_to 'All concerts', allConcerts_path %></a></li>
+	</ul>
+</nav>
+
+<% añoActual = Date.today.year %>
+<% mesActual = Date.today.month %>
+<% diaActual = Date.today.day %>
+
+<% fechaActual = añoActual.to_s + mesActual.to_s + diaActual.to_s %>
+<% fechaActualHastaMes = añoActual.to_s + mesActual.to_s %>
+
+<div id="today-concerts">
+	<h1>Today concerts</h1>
+	
+	<% @concerts.each do |concert| %>
+	<div class="acceder-a-conciertos">
+		<% añoConcierto = concert.date.to_s.slice(0..3) %>
+		<% mesConcierto = concert.date.to_s.slice(5..6).sub(/^0/, "") %>
+		<% diaConcierto = concert.date.to_s.slice(8..9).sub(/^0/, "") %>
+		<% fechaConcierto = añoConcierto + mesConcierto + diaConcierto %>
+
+		<% if fechaConcierto === fechaActual %>
+			<a><%= link_to concert.bandName, concert_path(concert) %></a>
+		<% end %>
+	</div>
+	<% end %>
+</div>
+
+<div id="month-concerts">
+	<h1>This month...</h>
+
+	<% @concerts.each do |concert| %>
+	<div class="acceder-a-conciertos">
+		<% añoConcierto = concert.date.to_s.slice(0..3) %>
+		<% mesConcierto = concert.date.to_s.slice(5..6).sub(/^0/, "") %>
+		<% fechaConciertoParaEsteMes = añoConcierto + mesConcierto %>
+
+		<% if fechaConciertoParaEsteMes === fechaActualHastaMes %>
+			<a><%= link_to concert.bandName, concert_path(concert) %></a>
+		<% end %>
+	</div>	
+	<% end %>
+	
+</div>
+
+<footer>
+	<p id="info">Nuestra web es aprueba de hackers, pero conseguimos algo más dificil, que los likes se mantengan aunque recargues o cierres la página. No es asombroso!?!?!?</p>
+	<p id="creators">Crafted with &hearts; by Alejo, Irene, Ivan y Juan Carlos</p>
+</footer>

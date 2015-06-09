@@ -1,0 +1,5 @@
+User.create name: "Fry", image: "Fry-meetic.jpg", age: 35, pet: "El perro de Fry", food: "Slurm", program: "Ruby"
+User.create name: "Leela", image: "Leela-meetic.jpg", age: 32, pet: "Mordisquitos", food: "Popplers", program: "Ruby"
+User.create name: "Bender", image: "Bender-meetic.jpg", age: 8, pet: "La postal de Quiero a mi mama", food: "Tuercas", program: "Javascript"
+User.create name: "Zoidberg", image: "Zoidberg-meetic.jpg", age: 13, pet: "Nadie, no tengo amigos", food: "Anchoas", program: "Javascript"
+User.create name: "Zapp Brannigan", image: "Zapp-meetic.jpg", age: 33, pet: "Kif", food: "Leela", program: "Ruby"

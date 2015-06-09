@@ -1,0 +1,59 @@
+<nav class="nav primary-nav">
+	<ul>
+		<li><a><%= link_to 'Home', concerts_path %></a></li><!--
+		--><li><a><%= link_to 'New concert', new_concert_path %></a></li><!--
+		--><li><a><%= link_to 'Popular concerts', popularConcerts_path %></a></li><!--
+		--><li><a><%= link_to 'All concerts', allConcerts_path %></a></li>
+	</ul>
+</nav>
+
+<% if @concert.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@concert.errors.count, "error") %> prohibited this article from being saved:</h2>
+ 
+    <ul>
+    <% @concert.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @concert do |f| %>
+<p>
+	<%= f.label :bandName %><br>
+	<%= f.text_field :bandName %>
+</p>
+
+<p>
+	<%= f.label :venue %><br>
+	<%= f.text_field :venue %>
+</p>
+
+<p>
+	<%= f.label :city %><br>
+	<%= f.text_field :city %>
+</p>
+
+<p>
+	<%= f.label :date %><br>
+	<%= f.text_field :date, :id=>'fecha', :placeholder => 'YYYY-MM-DD' %>
+</p>
+
+<p>
+	<%= f.label :price %><br>
+	<%= f.text_field :price %>
+</p>
+
+<p>
+	<%= f.label :description %><br>
+	<%= f.text_area :description %>
+</p>
+
+<p>
+	<%= f.submit %>
+</p>
+
+<% end %>
+
+<footer>Crafted with &hearts; by Alejo, Ivan, Irene y Juan Carlos</footer>

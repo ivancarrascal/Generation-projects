@@ -1,0 +1,12 @@
+<h1> The Futurama Matcher </h1>
+<ul>
+	<% @users.each do |user| %>
+			<li><h2><%= link_to(user.name, user_path(user)) %></h2></li>
+			<li><%= user.age %></li>
+			<li><%= user.pet %></li>
+			<li><%= user.food %></li>
+			<li><%= user.program %> </li>
+	<% end %>
+</ul>
+
+<p><%= link_to('New User', new_user_path) %></p>

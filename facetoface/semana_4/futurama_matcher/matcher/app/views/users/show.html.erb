@@ -1,0 +1,19 @@
+<h1>User <%= @user.id %></h1>
+	<ul>
+		<li>
+			<h4>Name: <%= @user.name %></h4>
+			<img src="<%= '/' + @user.image %>">
+			<h4>Age: <%= @user.age %></h4>
+			<h4>Pet: <%= @user.pet %></h4>
+			<h4>Favourite food: <%= @user.food %></h4>
+			<h4>Love programming with: <%= @user.program %></h4>
+		</li>
+		<li><strong><%= link_to('Home', users_path) %></strong></li>
+	</ul>
+</h1>
+<h2>Matches:</h2>
+<ul>
+	<% @users.each do |character| %>
+		<li><%= link_to(character.name, user_path(character)) %></li>
+	<% end %>
+</ul>
